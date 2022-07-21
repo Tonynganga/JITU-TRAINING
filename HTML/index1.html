@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div Align Attribbute</title>
+    <script src="stopwatch.js"></script>
+</head>
+<body>
+  <button id="callback">
+    Click Here
+  </button>
+
+  <p>Hello</p>
+  <p>Hello</p>
+  <p>Hello</p>
+  <p>Hello</p>
+  <p>Hello</p>
+  
+  <button id="click">Hello There</button>
+  
+  <!-- <script src="functions.js"></script> -->
+  <script>
+    document.getElementById("callback").style.backgroundColor = "red";
+    document.getElementById("callback").style.color = "white";
+    const nodes = document.getElementsByTagName("p");
+    for(let i = 0; i < nodes.length; i++) {
+      nodes[i].style.color = "red";
+    }
+    newel = document.getElementById("click");
+    let displymess = () =>{
+      alert("Hello There my friend!!")
+    }
+
+    let changecolor = () =>{
+      newel.style.color = "white";
+      newel.style.padding = "10px";
+      newel.style.borderRadius = "10px";
+      newel.style.background = "blue";
+      newel.style.border = "none";
+    }
+    let backcolor = () =>{
+      newel.style.color = "black";
+      newel.style.padding = "0px";
+      newel.style.borderRadius = "3px";
+      newel.style.background = "white";
+      newel.style.border = "1px solid black";
+    }
+
+    
+    newel.addEventListener("click", displymess);
+    newel.addEventListener("mouseenter", changecolor);
+    newel.addEventListener("mouseleave", backcolor);
+
+    //created = document.createElement("<p>Hello</p>");
+    //document.createElement("div").appendChild(created);
+    //document.body.appendChild(created);
+
+   
+    
+  </script>
+</body>
+</html>
